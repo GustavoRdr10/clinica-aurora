@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Terapêutico Aurora</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        function abrirModal(src) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function fecharModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // Fecha ao clicar fora da imagem
+        window.onclick = function (event) {
+            const modal = document.getElementById("modal");
+
+            if (event.target === modal) {
+                fecharModal();
+            }
+        }
+
+        function mostrarSecao(id) {
+            document.querySelectorAll("section").forEach(secao => {
+                secao.style.display = "none";
+            });
+
+            const secao = document.getElementById(id);
+
+            if (secao) {
+                secao.style.display = "block";
+                location.hash = id;
+            }
+
+            const menu = document.getElementById("menu");
+            const title = document.querySelector(".menu-title");
+
+            menu.classList.remove("ativo");
+            title.classList.remove("oculto");
+        }
+        function carregarRota() {
+            const rota = window.location.hash.replace("#", "");
+            if (rota && document.getElementById(rota)) {
+                mostrarSecao(rota);
+            } else {
+                mostrarSecao("inicio");
+            }
+        }
+
+        window.addEventListener("load", carregarRota);
+        window.addEventListener("hashchange", carregarRota);
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const title = document.querySelector(".menu-title");
+
+            menu.classList.toggle("ativo");
+
+            if (menu.classList.contains("ativo")) {
+                title.classList.add("oculto");
+            } else {
+                title.classList.remove("oculto");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <a href="javascript:mostrarSecao('inicio')">
+                <img src="Fotos Clinica Aurora/PHOTO-2026-06-17-12-35-09.jpg" alt="Logo Aurora" class="logo">
+            </a>
+            <div class="titulo">
+                <h1>CENTRO TERAPÊUTICO AURORA</h1>
+                <p>Um Espaço de Recuperação e Tratamento</p>
+                <p>(UNIDADE MASCULINA)</p>
+                <p>Localizado na cidade de Cachoeirinha / RS</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu principal -->
+    <nav class="menu-principal">
+        <div class="menu-topo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <div class="menu-title">
+                Centro Terapêutico Aurora
+            </div>
+        </div>
+
+        <ul id="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#tratamento">Tratamento</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#visita">Agendar Visita</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="inicio">
+        <div class="linha">
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-46.jpg" alt="Imagem 1"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-49.jpg" alt="Imagem 2"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-50[3].jpg" alt="Imagem 3"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-46[3].jpg" alt="Imagem 4"
+                    onclick="abrirModal(this.src)"></div>
+        </div>
+
+        <div class="linha">
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-48.jpg" alt="Imagem 5"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-46[1].jpg" alt="Imagem 6"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-47[3].jpg" alt="Imagem 7"
+                    onclick="abrirModal(this.src)"></div>
+            <div class="item"><img src="Fotos Clinica Aurora/PHOTO-2026-06-13-17-17-49[2].jpg" alt="Imagem 8"
+                    onclick="abrirModal(this.src)"></div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="sobre-nos">
+        <h2>Sobre Nós</h2>
+
+        A CT Aurora foi criada em fevereiro de 2026 com o intuito de, primeiramente, salvar minha vida e,
+        posteriormente, salvar as vidas das pessoas que aqui chegassem.
+
+        É uma casa com princípios acolhedores, baseada no conceito de humanismo, respeito ao próximo e dignidade. Aqui
+        existe tratamento para todos que buscam recuperação e uma nova maneira de viver.
+
+        Temos todo o planejamento voltado à recuperação, com profissionais da saúde, da mente e do bem-estar, para que o
+        tratamento ocorra da melhor forma possível. Lembrando que existem três tipos básicos de tratamento:
+
+        Três meses — somente para desintoxicação.
+
+        Seis meses — para retirar o álcool ou droga do organismo.
+
+        Nove meses — para fazer a simbologia do renascimento (essa é a mais indicada), ficando um tempo considerável
+        longe das substâncias que alteram o comportamento abusivo e obsessivo.
+
+        Também oferecemos tratamento relacionado à ludopatia (vício em jogos), concentrando esforços em palestras,
+        espiritualidade e disciplina, a fim de buscarmos o equilíbrio novamente e viver em recuperação para sempre.
+
+        Dê uma chance para a vida. Nós estamos aqui para ajudar a salvar vidas e também famílias!
+
+        <img src="Fotos Clinica Aurora/fotoClonica-removebg-preview.png" alt="Imagem Sobre Nós" class="sobre-nos-img">
+
+    </section>
+
+
+
+    <!-- Seção Tratamento -->
+    <section id="tratamento" class="tratamento">
+        <h2>Tratamento</h2>
+        <p>Detalhes sobre os métodos de tratamento oferecidos.</p>
+
+        <p><strong>SEGMENTO</strong>: Internações <em>(Voluntárias)</em> e <em>(Involuntárias)</em> para tratamento da
+            dependência química e outros problemas de saúde mental relacionados.</p>
+
+        <p>🔷 Nossa equipe técnica e disciplinar é composta por:</p>
+        <ul class="lista-sobre">
+            <li>✅ Enfermagem</li>
+            <li>✅ Psicóloga</li>
+            <li>✅ Psiquiatra</li>
+            <li>✅ Nutricionista</li>
+            <li>✅ Terapeuta</li>
+            <li>✅ Coordenadores disciplinares (24 horas)</li>
+            <li>✅ Consultor em dependência química 24h</li>
+        </ul>
+
+        <p>🔷 Nosso plano de tratamento é personalizado e abrange três etapas:</p>
+        <ul class="lista-sobre">
+            <li>📍 <strong>Etapa 1 (1º ao 3º mês)</strong>: Desintoxicação, adaptação ao convívio e reeducação
+                alimentar.</li>
+            <li>📍 <strong>Etapa 2 (4º ao 6º mês)</strong>: Tratamento psicológico, terapias e psicologia aplicada.</li>
+            <li>📍 <strong>Etapa 3 (7º ao 9º mês)</strong>: Tratamento espiritual, valorização da vida e fé em um poder
+                superior.</li>
+        </ul>
+
+        <p><strong>Oferecemos também:</strong></p>
+        <ul class="lista-sobre">
+            <li>📚 12 Passos</li>
+            <li>📃 Plano de prevenção a recaída</li>
+            <li>📓 Terapia racional emotiva</li>
+            <li>📘 Terapia cognitiva comportamental</li>
+            <li>📙 Treinamento para convívio social</li>
+            <li>📝 Atendimento individual e em grupo</li>
+            <li>👨🏻‍🎓 Atendimento semanal assistente social</li>
+            <li>👨🏻‍💻 Apoio jurídico/INSS</li>
+            <li>👨‍🌾 Labor terapia</li>
+            <li>🙇‍♂️ Espiritualidade</li>
+            <li>😇 Grupo de orações diárias</li>
+            <li>⛹️‍♂️ Atividade física</li>
+            <li>🧽 Lavanderia</li>
+            <li>📖 Biblioteca</li>
+            <li>🎞️ 02 salas de TV com todos os canais, ambiente climatizado</li>
+            <li>🍛 4 refeições</li>
+            <li>👩‍🏫 Psicóloga quinzenal</li>
+            <li>🧑‍💼 Terapeuta semanal</li>
+            <li>👨🏻‍⚕️ Psiquiatra mensal</li>
+            <li>👤 Coordenação (24 horas)</li>
+            <li>👥 Monitoria</li>
+            <li>🥷🏻 Ronda noturno</li>
+            <li>📲 Ligações para os familiares (todos os sábados)</li>
+        </ul>
+
+        <p>☎️ Consulte nossos valores e entre em contato conosco para mais informações.</p>
+        <p>🚑🚘 Disponibilizamos Resgate e remoção 24 horas.</p>
+    </section>
+
+    <!-- Seção Equipe -->
+    <section id="equipe" class="equipe">
+        <h2>Equipe</h2>
+        <p>Apresentação dos profissionais que fazem parte do centro.</p>
+    </section>
+
+    <!-- Seção Visita -->
+    <section id="visita" class="visita">
+
+        <h2>Agendar Visita</h2>
+
+        <p>Preencha o formulário ou fale diretamente conosco pelo WhatsApp.</p>
+
+        <form class="form-visita">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="tel" placeholder="WhatsApp" required>
+            <select required>
+                <option value="">Tipo de solicitação</option>
+                <option>Visita familiar</option>
+                <option>Informações</option>
+                <option>Internação</option>
+            </select>
+
+            <input type="date" required>
+            <textarea placeholder="Mensagem"></textarea>
+
+            <button type="submit">Enviar solicitação</button>
+        </form>
+
+        <div class="info-visita">
+            <p>📍 Visitas mediante agendamento</p>
+            <p>🚑 Resgate 24h disponível</p>
+            <p>👨‍👩‍👦 Atendimento familiar aos sábados</p>
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="fechar" onclick="fecharModal()">×</span>
+        <img id="modal-img" class="modal-conteudo" alt="Imagem ampliada">
+    </div>
+
+    <!-- Botão flutuante WhatsApp (direita) -->
+    <a href="https://wa.me/555194628077" target="_blank" class="whatsapp-flutuante">
+        <img src="Fotos Clinica Aurora/icons8-whatsapp.gif" alt="WhatsApp">
+    </a>
+
+    <!-- Botão flutuante Contato (esquerda) -->
+    <a href="mailto:comunidadet.aurora@gmail.com" class="contato-flutuante">
+        <img class="img" src="Fotos Clinica Aurora/email.png">
+    </a>
+
+    <!-- Localização -->
+    <footer>
+        <p>📍 Localização:</p>
+        <a href="https://www.google.com/maps?q=Rua+Paquetá,+86,+Parque+da+Matriz,+Cachoeirinha,+RS" target="_blank">
+            <img src="Fotos Clinica Aurora/icons8-google-maps-novo-48.png" alt="Mapa de localização"
+                class="mapa-localizacao">
+        </a>
+        <p>✳️ Responsável pela Unidade: Luciano</p>
+    </footer>
+</body>
+
+</html>
