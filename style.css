@@ -567,6 +567,11 @@ footer a {
         gap: 15px;
     }
 
+    .mapa-localizacao {
+        width: 38px;   
+        height: auto;
+    }
+
     .logo {
         width: 130px;
         height: 130px;
