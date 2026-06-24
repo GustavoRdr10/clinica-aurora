@@ -528,6 +528,53 @@ footer a {
     background: #1ebe5d;
 }
 
+.equipe {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.equipe-card {
+    background: #fff;
+    width: 250px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.equipe-card:hover {
+    transform: scale(1.05);
+}
+
+.equipe-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00BFFF;
+    margin-bottom: 10px;
+}
+
+.equipe-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.equipe-card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
 /* animação bonita */
 @keyframes glow {
     0% {
@@ -659,6 +706,16 @@ footer a {
         background: #333;
         padding: 0;
         margin: 0;
+    }
+
+    .equipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipe-card {
+        width: 90%;
+        max-width: 320px;
     }
 
     .menu-principal ul.ativo {
