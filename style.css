@@ -625,9 +625,25 @@ footer a {
 /* =========================
    RESPONSIVIDADE
 ========================= */
-/* =========================
-   RESPONSIVIDADE MOBILE
-========================= */
+
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+    .menu-topo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
 
     /* =========================
