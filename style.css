@@ -631,9 +631,7 @@ footer a {
 @media (min-width: 769px) {
 
     .menu-topo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 
     .menu-title {
@@ -746,14 +744,7 @@ footer a {
     }
 
     .menu-topo {
-        display: flex;
-        flex-direction: column;   
-        align-items: center;      
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
+        display: none;
     }
 
     .menu-title {
