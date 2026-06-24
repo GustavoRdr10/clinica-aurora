@@ -373,20 +373,12 @@ footer a {
    TÍTULO ANIMADO NO MENU MOBILE
 ========================= */
 .menu-title {
-    display: none;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 2px;
     white-space: nowrap;
-
-    margin-right: 50px;
-
-    transition: all 0.4s ease;
-
-    animation:
-        glow 1.5s ease-in-out infinite,
-        floatText 2.5s ease-in-out infinite;
+    animation: none;
 }
 
 .menu-topo {
@@ -747,13 +739,16 @@ footer a {
         width: 100%;
         text-align: center;
     }
-
+    
     .menu-title {
         display: inline-block;
-        flex: 1;
-        animation: none;
-        text-align: left;
-        margin-right: 0;
+        animation: none !important;
+        text-shadow: none !important;
+        transform: none !important;
+        letter-spacing: normal;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
     }
 
     /* =========================
