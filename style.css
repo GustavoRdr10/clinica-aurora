@@ -544,8 +544,8 @@ footer a {
     transition: transform 0.3s;
 }
 
-.equipe-card p {
-    color: #333; 
+.crp {
+    color: #333;
 }
 
 .equipe-card:hover {
