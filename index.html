@@ -40,8 +40,17 @@
                 secaoAtiva.style.display = "block";
                 window.location.hash = id;
 
-                // 🔥 SEMPRE VOLTA PRO TOPO
+                // sempre volta pro topo
                 window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+
+            // 🔥 FECHA O MENU AUTOMATICAMENTE AO CLICAR
+            const menu = document.getElementById("menu");
+            const title = document.querySelector(".menu-title");
+
+            if (menu.classList.contains("ativo")) {
+                menu.classList.remove("ativo");
+                title.classList.remove("oculto");
             }
         }
 
