@@ -40,11 +40,11 @@
                 secaoAtiva.style.display = "block";
                 window.location.hash = id;
 
-                // sempre volta pro topo
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                // 🔥 SEMPRE VOLTA PRO TOPO (instantâneo, mais confiável)
+                window.scrollTo(0, 0);
             }
 
-            // 🔥 FECHA O MENU AUTOMATICAMENTE AO CLICAR
+            // 🔥 FECHA MENU AUTOMATICAMENTE AO CLICAR
             const menu = document.getElementById("menu");
             const title = document.querySelector(".menu-title");
 
