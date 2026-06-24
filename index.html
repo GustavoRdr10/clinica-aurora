@@ -29,11 +29,17 @@
         }
 
         function mostrarSecao(id) {
+
             document.querySelectorAll("section").forEach(secao => {
                 secao.style.display = "none";
             });
 
-            document.getElementById(id).style.display = "block";
+            const secaoAtiva = document.getElementById(id);
+
+            if (secaoAtiva) {
+                secaoAtiva.style.display = "block";
+                location.hash = id;
+            }
         }
 
         function carregarRota() {
