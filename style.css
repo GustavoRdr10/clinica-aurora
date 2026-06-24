@@ -30,9 +30,9 @@ section {
 ========================= */
 .logo-container {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
     text-align: left;
     padding: 20px;
     gap: 15px;
@@ -47,7 +47,8 @@ section {
     border: 4px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
 
-    margin: 0 auto; /* centraliza */
+    margin: 0 auto;
+    /* centraliza */
 }
 
 .logo:hover {
@@ -287,10 +288,10 @@ footer a {
 }
 
 .sobre-nos h2,
-.tratamento h2, 
-.equipe h2, 
+.tratamento h2,
+.equipe h2,
 .agendar-visita h2 {
-    color: #00BFFF !important; 
+    color: #00BFFF !important;
 }
 
 .sobre-nos p {
@@ -379,15 +380,6 @@ footer a {
     letter-spacing: 2px;
     white-space: nowrap;
     animation: none;
-}
-
-.menu-topo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background: #333;
-    padding: 10px;
 }
 
 .visita {
@@ -493,6 +485,14 @@ footer a {
     transform: scale(1.03);
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.menu-topo {
+    display: none;
+}
+
 .modal-sucesso-box {
     background: white;
     padding: 30px;
@@ -542,7 +542,7 @@ footer a {
     width: 250px;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -551,7 +551,7 @@ footer a {
     transform: scale(1.05);
 }
 
-.equipe-card  {
+.equipe-card {
     color: #333 !important;
 }
 
@@ -635,13 +635,6 @@ footer a {
     .menu-topo {
         display: none;
     }
-
-    .menu-title {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        width: 100%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -704,31 +697,34 @@ footer a {
        MENU HAMBURGUER
     ========================= */
 
+    /* =========================
+   MENU HAMBURGUER
+========================= */
+
     .menu-topo {
-        display: flex; /* ALTERAÇÃO IMPORTANTE */
+        display: flex !important;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         background: #333;
-        padding: 10px;
+        padding: 10px 15px;
     }
 
     .menu-toggle {
-        display: block;
+        display: block !important;
         background: none;
         border: none;
-        color: white;
-        font-size: 32px;
+        color: #fff;
+        font-size: 34px;
         cursor: pointer;
-        padding: 5px 10px;
+        padding: 5px;
+        z-index: 999;
     }
 
     .menu-title {
-        display: inline-block;
         color: #fff;
         font-size: 16px;
         font-weight: bold;
-        margin-right: 10px;
     }
 
     .menu-principal {
@@ -740,8 +736,8 @@ footer a {
         flex-direction: column;
         width: 100%;
         background: #333;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
     .menu-principal ul.ativo {
@@ -749,9 +745,9 @@ footer a {
     }
 
     .menu-principal li {
+        width: 100%;
         margin: 0;
         padding: 15px;
-        width: 100%;
         text-align: center;
         border-bottom: 1px solid #555;
     }
