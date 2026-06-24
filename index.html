@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-
         function abrirModal(src) {
             const modal = document.getElementById("modal");
             const modalImg = document.getElementById("modal-img");
@@ -21,7 +20,6 @@
             document.getElementById("modal").style.display = "none";
         }
 
-        // Fecha ao clicar fora da imagem
         window.onclick = function (event) {
             const modal = document.getElementById("modal");
 
@@ -35,30 +33,18 @@
                 secao.style.display = "none";
             });
 
-            const secao = document.getElementById(id);
-
-            if (secao) {
-                secao.style.display = "block";
-                location.hash = id;
-            }
-
-            const menu = document.getElementById("menu");
-            const title = document.querySelector(".menu-title");
-
-            menu.classList.remove("ativo");
-            title.classList.remove("oculto");
+            document.getElementById(id).style.display = "block";
         }
+
         function carregarRota() {
             const rota = window.location.hash.replace("#", "");
+
             if (rota && document.getElementById(rota)) {
                 mostrarSecao(rota);
             } else {
                 mostrarSecao("inicio");
             }
         }
-
-        window.addEventListener("load", carregarRota);
-        window.addEventListener("hashchange", carregarRota);
 
         function toggleMenu() {
             const menu = document.getElementById("menu");
@@ -73,6 +59,45 @@
             }
         }
 
+        window.addEventListener("load", function () {
+
+            carregarRota();
+
+            const form = document.getElementById("formVisita");
+
+            if (form) {
+                form.addEventListener("submit", function (e) {
+
+                    e.preventDefault();
+
+                    const nome = document.getElementById("nome").value;
+                    const whatsapp = document.getElementById("whatsapp").value;
+                    const tipo = document.getElementById("tipo").value;
+                    const data = document.getElementById("data").value;
+                    const mensagem = document.getElementById("mensagem").value;
+
+                    const texto =
+                        `*Nova solicitação de visita*
+    
+    Nome: ${nome}
+    WhatsApp: ${whatsapp}
+    Tipo: ${tipo}
+    Data: ${data}
+    
+    Mensagem:
+    ${mensagem}`;
+
+                    const numeroClinica = "5551985389986";
+
+                    window.open(
+                        `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`,
+                        "_blank"
+                    );
+                });
+            }
+        });
+
+        window.addEventListener("hashchange", carregarRota);
     </script>
 
 </head>
@@ -104,11 +129,11 @@
         </div>
 
         <ul id="menu">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#tratamento">Tratamento</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="#visita">Agendar Visita</a></li>
+            <li><a href="javascript:mostrarSecao('inicio')">Início</a></li>
+            <li><a href="javascript:mostrarSecao('sobre')">Sobre Nós</a></li>
+            <li><a href="javascript:mostrarSecao('tratamento')">Tratamento</a></li>
+            <li><a href="javascript:mostrarSecao('equipe')">Equipe</a></li>
+            <li><a href="javascript:mostrarSecao('visita')">Agendar Visita</a></li>
         </ul>
     </nav>
 
@@ -240,18 +265,20 @@
 
         <p>Preencha o formulário ou fale diretamente conosco pelo WhatsApp.</p>
 
-        <form class="form-visita">
-            <input type="text" placeholder="Nome completo" required>
-            <input type="tel" placeholder="WhatsApp" required>
-            <select required>
+        <form class="form-visita" id="formVisita">
+            <input type="text" id="nome" placeholder="Nome completo" required>
+            <input type="tel" id="whatsapp" placeholder="WhatsApp" required>
+
+            <select id="tipo" required>
                 <option value="">Tipo de solicitação</option>
                 <option>Visita familiar</option>
                 <option>Informações</option>
                 <option>Internação</option>
             </select>
 
-            <input type="date" required>
-            <textarea placeholder="Mensagem"></textarea>
+            <input type="date" id="data" required>
+
+            <textarea id="mensagem" placeholder="Mensagem"></textarea>
 
             <button type="submit">Enviar solicitação</button>
         </form>
