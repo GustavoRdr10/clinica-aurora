@@ -52,11 +52,11 @@
                 secaoAtiva.style.display = "block";
                 window.location.hash = id;
 
-                // 🔥 SEMPRE VOLTA PRO TOPO (instantâneo, mais confiável)
+                //SEMPRE VOLTA PRO TOPO (instantâneo, mais confiável)
                 window.scrollTo(0, 0);
             }
 
-            // 🔥 FECHA MENU AUTOMATICAMENTE AO CLICAR
+            //FECHA MENU AUTOMATICAMENTE AO CLICAR
             const menu = document.getElementById("menu");
             const title = document.querySelector(".menu-title");
 
@@ -91,7 +91,7 @@
 
         window.addEventListener("load", function () {
 
-            // 🔥 abre sempre no topo ao entrar no site
+            //abre sempre no topo ao entrar no site
             window.scrollTo(0, 0);
 
             carregarRota();
@@ -140,7 +140,7 @@
     <div class="modal-sucesso-box">
         <h2>✅ Solicitação enviada!</h2>
         <p>Obrigado pelo contato.</p>
-        <p>Sua solicitação foi preparada para envio ao WhatsApp.</p>
+        <p>Sua solicitação vai ser enviada por WhatsApp.</p>
 
         <button onclick="enviarWhatsApp()">
             OK
@@ -313,7 +313,6 @@
 
         <form class="form-visita" id="formVisita">
             <input type="text" id="nome" placeholder="Nome completo" required>
-            <input type="tel" id="whatsapp" placeholder="WhatsApp" required>
 
             <select id="tipo" required>
                 <option value="">Tipo de solicitação</option>
