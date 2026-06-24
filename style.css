@@ -544,6 +544,10 @@ footer a {
     transition: transform 0.3s;
 }
 
+.equipe-card p {
+    color: #333; 
+}
+
 .equipe-card:hover {
     transform: scale(1.05);
 }
@@ -739,7 +743,7 @@ footer a {
         width: 100%;
         text-align: center;
     }
-    
+
     .menu-title {
         display: inline-block;
         animation: none !important;
