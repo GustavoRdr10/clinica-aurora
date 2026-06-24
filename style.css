@@ -550,10 +550,20 @@ footer a {
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .equipe-card:hover {
     transform: scale(1.05);
+}
+
+.equipe-card,
+.equipe-card * {
+    text-decoration: none !important;
 }
 
 .equipe-card img {
