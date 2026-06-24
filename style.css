@@ -544,15 +544,12 @@ footer a {
     transition: transform 0.3s;
 }
 
-.crp {
-    color: #333;
-}
 
 .equipe-card:hover {
     transform: scale(1.05);
 }
 
-.equipe-card .crp {
+.equipe-card  {
     color: #333 !important;
 }
 
