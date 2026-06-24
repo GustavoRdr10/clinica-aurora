@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
+
+        let linkWhatsapp = "";
+
+        function enviarWhatsApp() {
+
+            document.getElementById("modalSucesso").style.display = "none";
+
+            window.open(linkWhatsapp, "_blank");
+
+            document.getElementById("formVisita").reset();
+        }
+
         function abrirModal(src) {
             const modal = document.getElementById("modal");
             const modalImg = document.getElementById("modal-img");
@@ -110,10 +122,10 @@
 
                     const numeroClinica = "5551985389986";
 
-                    window.open(
-                        `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`,
-                        "_blank"
-                    );
+                    linkWhatsapp =
+                        `https://wa.me/${5551985389986}?text=${encodeURIComponent(texto)}`;
+
+                    document.getElementById("modalSucesso").style.display = "flex";
                 });
             }
         });
@@ -122,6 +134,19 @@
     </script>
 
 </head>
+
+<!-- Modal de Sucesso -->
+<div id="modalSucesso" class="modal">
+    <div class="modal-sucesso-box">
+        <h2>✅ Solicitação enviada!</h2>
+        <p>Obrigado pelo contato.</p>
+        <p>Sua solicitação foi preparada para envio ao WhatsApp.</p>
+
+        <button onclick="enviarWhatsApp()">
+            OK
+        </button>
+    </div>
+</div>
 
 <body>
     <!-- Cabeçalho -->
