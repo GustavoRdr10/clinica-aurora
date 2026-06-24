@@ -552,9 +552,8 @@ footer a {
     transform: scale(1.05);
 }
 
-.equipe-card,
-.equipe-card * {
-    text-decoration: none !important;
+.equipe-card .crp {
+    color: #333 !important;
 }
 
 
