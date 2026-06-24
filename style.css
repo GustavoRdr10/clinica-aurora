@@ -655,7 +655,7 @@ footer a {
 
     .logo-container {
         display: flex;
-        flex-direction: row;       
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         text-align: left;
@@ -665,7 +665,7 @@ footer a {
     }
 
     .mapa-localizacao {
-        width: 38px;   
+        width: 38px;
         height: auto;
     }
 
@@ -701,15 +701,37 @@ footer a {
     }
 
     /* =========================
-       MENU
+       MENU HAMBURGUER
     ========================= */
+
+    .menu-topo {
+        display: flex; /* ALTERAÇÃO IMPORTANTE */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: #333;
+        padding: 10px;
+    }
+
     .menu-toggle {
         display: block;
-        margin-left: 10px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .menu-title {
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
     }
 
     .menu-principal {
-        display: block;
         padding: 0;
     }
 
@@ -722,19 +744,8 @@ footer a {
         margin: 0;
     }
 
-    .equipe-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .equipe-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
     .menu-principal ul.ativo {
         display: flex;
-        align-items: center;
     }
 
     .menu-principal li {
@@ -745,24 +756,24 @@ footer a {
         border-bottom: 1px solid #555;
     }
 
-    .menu-topo {
-        display: none;
+    /* =========================
+       EQUIPE
+    ========================= */
+
+    .equipe-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .menu-title {
-        display: inline-block;
-        animation: none !important;
-        text-shadow: none !important;
-        transform: none !important;
-        letter-spacing: normal;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
+    .equipe-card {
+        width: 90%;
+        max-width: 320px;
     }
 
     /* =========================
        GALERIA
     ========================= */
+
     .linha {
         flex-direction: column;
         align-items: center;
@@ -783,6 +794,7 @@ footer a {
     /* =========================
        SEÇÕES
     ========================= */
+
     .sobre-nos,
     .tratamento,
     .visita {
@@ -806,11 +818,12 @@ footer a {
     /* =========================
        FORMULÁRIO
     ========================= */
+
     .form-visita input,
     .form-visita select,
     .form-visita textarea {
-        font-size: 16px;
         width: 100%;
+        font-size: 16px;
         box-sizing: border-box;
     }
 
@@ -821,6 +834,7 @@ footer a {
     /* =========================
        BOTÕES FLUTUANTES
     ========================= */
+
     .whatsapp-flutuante,
     .contato-flutuante {
         width: 55px;
@@ -852,6 +866,7 @@ footer a {
     /* =========================
        FOOTER
     ========================= */
+
     footer {
         padding: 15px;
         font-size: 14px;
