@@ -566,14 +566,13 @@ footer a {
 
     .logo-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;    
         align-items: center;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
         width: 100%;
-        margin: 0 auto;
-        padding: 0;
-        gap: 15px;
+        padding: 10px 5px;
+        gap: 12px;
     }
 
     .mapa-localizacao {
@@ -594,7 +593,7 @@ footer a {
 
     .titulo {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .titulo h1 {
