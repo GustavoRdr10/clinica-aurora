@@ -39,6 +39,9 @@
             if (secaoAtiva) {
                 secaoAtiva.style.display = "block";
                 window.location.hash = id;
+
+                // 🔥 SEMPRE VOLTA PRO TOPO
+                window.scrollTo({ top: 0, behavior: "smooth" });
             }
         }
 
@@ -67,6 +70,9 @@
 
         window.addEventListener("load", function () {
 
+            // 🔥 abre sempre no topo ao entrar no site
+            window.scrollTo(0, 0);
+
             carregarRota();
 
             const form = document.getElementById("formVisita");
@@ -84,7 +90,7 @@
 
                     const texto =
                         `*Nova solicitação de visita*
-    
+        
     Nome: ${nome}
     WhatsApp: ${whatsapp}
     Tipo: ${tipo}
