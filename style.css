@@ -637,234 +637,245 @@ footer a {
     }
 }
 
-@media (max-width: 768px) {
+ 
 
     /* =========================
        CABEÇALHO
     ========================= */
-    header {
-        padding: 15px 10px;
+    @media (max-width: 768px) {
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+        header {
+            padding: 15px 10px;
+        }
+    
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            gap: 10px;
+        }
+    
+        .mapa-localizacao {
+            width: 38px;
+            height: auto;
+        }
+    
+        .logo {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+            margin: 0 auto;
+            display: block;
+        }
+    
+        .titulo {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        .titulo h1 {
+            font-size: 22px;
+            line-height: 1.3;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            padding: 0 10px;
+        }
+    
+        .titulo p {
+            font-size: 15px;
+            margin: 5px auto 0;
+            text-align: center;
+            width: 100%;
+            padding: 0 10px;
+        }
+    
+        /* =========================
+           MENU HAMBURGUER
+        ========================= */
+    
+        .menu-topo {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            background: #333;
+            padding: 12px 15px;
+        }
+    
+        .menu-toggle {
+            position: absolute;
+            left: 15px;
+            display: block !important;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 34px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 999;
+        }
+    
+        .menu-title {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+    
+        .menu-principal {
+            padding: 0;
+        }
+    
+        .menu-principal ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .menu-principal ul.ativo {
+            display: flex;
+        }
+    
+        .menu-principal li {
+            width: 100%;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+    
+        /* =========================
+           EQUIPE
+        ========================= */
+    
+        .equipe-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .equipe-card {
+            width: 90%;
+            max-width: 320px;
+        }
+    
+        /* =========================
+           GALERIA
+        ========================= */
+    
+        .linha {
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+    
+        .item {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .item img {
+            width: 90%;
+            max-width: 350px;
+            height: auto;
+        }
+    
+        /* =========================
+           SEÇÕES
+        ========================= */
+    
+        .sobre-nos,
+        .tratamento,
+        .visita {
+            width: 90%;
+            padding: 15px;
+            margin: 20px auto;
+        }
+    
+        .lista-sobre {
+            text-align: left;
+        }
+    
+        .sobre-nos h2,
+        .tratamento h2,
+        .equipe h2,
+        .agendar-visita h2,
+        .visita h2 {
+            font-size: 24px;
+        }
+    
+        /* =========================
+           FORMULÁRIO
+        ========================= */
+    
+        .form-visita input,
+        .form-visita select,
+        .form-visita textarea {
+            width: 100%;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+    
+        .form-visita button {
+            width: 100%;
+        }
+    
+        /* =========================
+           BOTÕES FLUTUANTES
+        ========================= */
+    
+        .whatsapp-flutuante,
+        .contato-flutuante {
+            width: 55px;
+            height: 55px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    
+        .whatsapp-flutuante {
+            right: 15px;
+            bottom: 15px;
+        }
+    
+        .contato-flutuante {
+            left: 15px;
+            bottom: 15px;
+        }
+    
+        .whatsapp-flutuante img,
+        .contato-flutuante img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+    
+        /* =========================
+           FOOTER
+        ========================= */
+    
+        footer {
+            padding: 15px;
+            font-size: 14px;
+        }
     }
-
-    .logo-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: left;
-        width: 100%;
-        padding: 10px;
-        gap: 12px;
-    }
-
-    .mapa-localizacao {
-        width: 38px;
-        height: auto;
-    }
-
-    .logo {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid white;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
-        margin: 0 auto;
-        display: block;
-    }
-
-    .titulo {
-        width: 100%;
-        text-align: left;
-    }
-
-    .titulo h1 {
-        font-size: 20px;
-        line-height: 1.2;
-        margin: 10px 0;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .titulo p {
-        font-size: 14px;
-        margin: 4px 0;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    /* =========================
-       MENU HAMBURGUER
-    ========================= */
-
-    /* =========================
-   MENU HAMBURGUER
-========================= */
-
-    .menu-topo {
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        background: #333;
-        padding: 10px 15px;
-    }
-
-    .menu-toggle {
-        display: block !important;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 34px;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 999;
-    }
-
-    .menu-title {
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .menu-principal {
-        padding: 0;
-    }
-
-    .menu-principal ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #333;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu-principal ul.ativo {
-        display: flex;
-    }
-
-    .menu-principal li {
-        width: 100%;
-        margin: 0;
-        padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid #555;
-    }
-
-    /* =========================
-       EQUIPE
-    ========================= */
-
-    .equipe-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .equipe-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    /* =========================
-       GALERIA
-    ========================= */
-
-    .linha {
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-    }
-
-    .item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .item img {
-        width: 90%;
-        max-width: 350px;
-        height: auto;
-    }
-
-    /* =========================
-       SEÇÕES
-    ========================= */
-
-    .sobre-nos,
-    .tratamento,
-    .visita {
-        width: 90%;
-        padding: 15px;
-        margin: 20px auto;
-    }
-
-    .lista-sobre {
-        text-align: left;
-    }
-
-    .sobre-nos h2,
-    .tratamento h2,
-    .equipe h2,
-    .agendar-visita h2,
-    .visita h2 {
-        font-size: 24px;
-    }
-
-    /* =========================
-       FORMULÁRIO
-    ========================= */
-
-    .form-visita input,
-    .form-visita select,
-    .form-visita textarea {
-        width: 100%;
-        font-size: 16px;
-        box-sizing: border-box;
-    }
-
-    .form-visita button {
-        width: 100%;
-    }
-
-    /* =========================
-       BOTÕES FLUTUANTES
-    ========================= */
-
-    .whatsapp-flutuante,
-    .contato-flutuante {
-        width: 55px;
-        height: 55px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
-
-    .whatsapp-flutuante {
-        right: 15px;
-        bottom: 15px;
-    }
-
-    .contato-flutuante {
-        left: 15px;
-        bottom: 15px;
-    }
-
-    .whatsapp-flutuante img,
-    .contato-flutuante img {
-        width: 28px;
-        height: 28px;
-        object-fit: contain;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-        padding: 15px;
-        font-size: 14px;
-    }
-}
+    
