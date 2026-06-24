@@ -386,6 +386,8 @@ footer a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    background: #333;
+    padding: 10px;
 }
 
 .visita {
