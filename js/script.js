@@ -109,7 +109,7 @@ ${mensagem}
 
 ⏳ Aguarde em instantes, a equipe entrará em contato com você.`;
 
-        const numeroClinica = "5551985389986";
+        const numeroClinica = "5551994628077";
 
         linkWhatsapp = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
 
