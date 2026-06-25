@@ -444,8 +444,6 @@ footer a {
     outline: none;
     transition: 0.3s;
     box-sizing: border-box;
-    -webkit-appearance: none;
-    appearance: none;
 }
 
 /* BOTÃO ENVIAR */

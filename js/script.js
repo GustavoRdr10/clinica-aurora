@@ -80,7 +80,9 @@ function toggleMenu() {
     }
 }
 
-
+function abrirDate(el) {
+    el.showPicker();
+}
 
 window.addEventListener("DOMContentLoaded", function () {
 
