@@ -15,17 +15,17 @@
 <body>
 
     <!-- Modal de Sucesso -->
-<div id="modalSucesso" class="modal">
-    <div class="modal-sucesso-box">
-        <h2>✅ Solicitação atendida!</h2>
-        <p>Obrigado pelo contato.</p>
-        <p>Sua solicitação vai ser enviada por WhatsApp.</p>
+    <div id="modalSucesso" class="modal">
+        <div class="modal-sucesso-box">
+            <h2>✅ Solicitação atendida!</h2>
+            <p>Obrigado pelo contato.</p>
+            <p>Sua solicitação vai ser enviada por WhatsApp.</p>
 
-        <button onclick="enviarWhatsApp()">
-            OK
-        </button>
+            <button onclick="enviarWhatsApp()">
+                OK
+            </button>
+        </div>
     </div>
-</div>
 
     <!-- Cabeçalho -->
     <header>
@@ -180,9 +180,9 @@
     <section id="equipe" class="equipe">
 
         <h2>Equipe</h2>
-    
+
         <div class="equipe-container">
-    
+
             <!-- Psiquiatra -->
             <div class="equipe-card">
                 <img src="Fotos Clinica Aurora/psiquiatra.jpg" alt="Psiquiatra">
@@ -190,7 +190,7 @@
                 <p><strong>Psiquiatra</strong></p>
                 <p>CRM-RS: 40729</p>
             </div>
-    
+
             <!-- Psicóloga -->
             <div class="equipe-card">
                 <img src="Fotos Clinica Aurora/psicologa.jpg" alt="Psicóloga">
@@ -198,7 +198,7 @@
                 <p><strong>Psicóloga</strong></p>
                 <p>CRP: 07 - 35110</p>
             </div>
-    
+
             <!-- Luciano -->
             <div class="equipe-card">
                 <img src="Fotos Clinica Aurora/luciano.jpg" alt="Luciano">
@@ -206,9 +206,9 @@
                 <p><strong>Consultor em Dependência Química</strong></p>
                 <p>Proprietário</p>
             </div>
-    
+
         </div>
-    
+
     </section>
 
     <!-- Seção Visita -->
@@ -228,7 +228,8 @@
                 <option>Internação</option>
             </select>
 
-            <input type="date" id="data" placeholder="Selecione uma data" required>
+            <input type="text" id="data" placeholder="Selecione uma data" onfocus="this.type='date'"
+                onblur="if(!this.value)this.type='text'" required>
 
             <textarea id="mensagem" placeholder="Mensagem"></textarea>
 
