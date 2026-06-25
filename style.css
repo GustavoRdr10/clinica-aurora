@@ -444,6 +444,8 @@ footer a {
     outline: none;
     transition: 0.3s;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 /* BOTÃO ENVIAR */
@@ -839,18 +841,18 @@ footer a {
         box-sizing: border-box;
     }
 
-
+    
 
     .form-visita button {
         width: 100%;
     }
 
-    .form-visita input[type="date"] {
-        height: 48px;
-        font-size: 16px;
-        border-radius: 8px;
-        padding: 0 12px;
-    }
+   .form-visita input[type="date"] {
+    height: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 0 12px;
+}
 
     /* =========================
            BOTÕES FLUTUANTES
