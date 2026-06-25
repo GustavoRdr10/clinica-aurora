@@ -435,6 +435,19 @@ footer a {
     resize: none;
 }
 
+.form-visita input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 /* BOTÃO ENVIAR */
 .form-visita button {
     background: linear-gradient(135deg, #00BFFF, #007BFF);
@@ -839,6 +852,12 @@ footer a {
 
     .form-visita button {
         width: 100%;
+    }
+
+    .form-visita input[type="date"] {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
     }
 
     /* =========================

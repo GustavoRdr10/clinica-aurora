@@ -80,34 +80,36 @@ function toggleMenu() {
     }
 }
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("formVisita");
 
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+    if (!form) return;
 
-            const nome = document.getElementById("nome").value;
-            const tipo = document.getElementById("tipo").value;
-            const data = document.getElementById("data").value;
-            const mensagem = document.getElementById("mensagem").value;
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            const texto = `*Nova solicitação de visita*
-            
+        const nome = document.getElementById("nome").value;
+        const tipo = document.getElementById("tipo").value;
+        const data = document.getElementById("data").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        const texto = `*Nova solicitação de visita*
+
 Nome: ${nome}
 Tipo: ${tipo}
 Data: ${data}
 
 Mensagem:
-${mensagem}`;
+${mensagem}
 
-            const numeroClinica = "5551985389986";
+⏳ Aguarde em instantes, a equipe entrará em contato com você.`;
 
-            linkWhatsapp = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
+        const numeroClinica = "5551985389986";
 
-            document.getElementById("modalSucesso").style.display = "flex";
-        });
-    }
+        linkWhatsapp = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
+
+        document.getElementById("modalSucesso").style.display = "flex";
+    });
 
 });
