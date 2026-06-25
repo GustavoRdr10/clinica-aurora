@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -410,6 +414,9 @@ footer a {
     flex-direction: column;
     gap: 12px;
     margin-top: 20px;
+
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-visita input,
@@ -421,8 +428,11 @@ footer a {
     font-size: 15px;
     outline: none;
     transition: 0.3s;
-}
 
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 .form-visita input:focus,
 .form-visita select:focus,
 .form-visita textarea:focus {
@@ -841,17 +851,14 @@ footer a {
         box-sizing: border-box;
     }
 
-    
-
     .form-visita button {
         width: 100%;
     }
 
-   .form-visita input[type="date"] {
-    height: 48px;
+    .form-visita input[type="date"] {
+    width: 100%;
     font-size: 16px;
-    border-radius: 8px;
-    padding: 0 12px;
+    padding: 14px;
 }
 
     /* =========================
