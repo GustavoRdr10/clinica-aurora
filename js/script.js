@@ -80,6 +80,8 @@ function toggleMenu() {
     }
 }
 
+
+
 window.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("formVisita");

@@ -841,15 +841,18 @@ footer a {
         box-sizing: border-box;
     }
 
+
+
     .form-visita button {
         width: 100%;
     }
 
     .form-visita input[type="date"] {
-    width: 100%;
-    font-size: 16px;
-    padding: 14px;
-}
+        height: 48px;
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 0 12px;
+    }
 
     /* =========================
            BOTÕES FLUTUANTES
