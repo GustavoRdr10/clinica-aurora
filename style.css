@@ -415,12 +415,10 @@ footer a {
 .form-visita input,
 .form-visita select,
 .form-visita textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    outline: none;
-    transition: 0.3s;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .form-visita input:focus,
@@ -437,13 +435,9 @@ footer a {
 
 .form-visita input[type="date"] {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    outline: none;
-    transition: 0.3s;
+    max-width: 100%;
     box-sizing: border-box;
+    min-width: 0;
     -webkit-appearance: none;
     appearance: none;
 }
