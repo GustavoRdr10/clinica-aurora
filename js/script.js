@@ -80,16 +80,21 @@ function toggleMenu() {
     }
 }
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+window.addEventListener("load", function () {
 
-    const nome = document.getElementById("nome").value;
-    const tipo = document.getElementById("tipo").value;
-    const data = document.getElementById("data").value;
-    const mensagem = document.getElementById("mensagem").value;
+    const form = document.getElementById("formVisita");
 
-    const texto = `*Nova solicitação de visita*
-    
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const tipo = document.getElementById("tipo").value;
+            const data = document.getElementById("data").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            const texto = `*Nova solicitação de visita*
+            
 Nome: ${nome}
 Tipo: ${tipo}
 Data: ${data}
@@ -97,11 +102,12 @@ Data: ${data}
 Mensagem:
 ${mensagem}`;
 
-    const numeroClinica = "5551985389986";
+            const numeroClinica = "5551985389986";
 
-    linkWhatsapp = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
+            linkWhatsapp = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
 
-    document.getElementById("modalSucesso").style.display = "flex";
+            document.getElementById("modalSucesso").style.display = "flex";
+        });
+    }
+
 });
-
-window.addEventListener("hashchange", carregarRota);
