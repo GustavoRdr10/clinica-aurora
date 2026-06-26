@@ -37,7 +37,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     text-align: center;
 }
@@ -129,13 +129,13 @@ section {
 
 .titulo h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
 }
 
 .titulo p {
     margin: 5px 0;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
