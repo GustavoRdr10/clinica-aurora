@@ -84,6 +84,38 @@ function abrirDate(el) {
     el.showPicker();
 }
 
+let slideIndex = 1;
+mostrarSlide(slideIndex);
+
+function mudarSlide(n) {
+    mostrarSlide(slideIndex += n);
+}
+
+function slideAtual(n) {
+    mostrarSlide(slideIndex = n);
+}
+
+function mostrarSlide(n) {
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+}
+
+setInterval(() => mudarSlide(1), 4000);
+
 window.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("formVisita");

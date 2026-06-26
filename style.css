@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -433,6 +434,7 @@ footer a {
     max-width: 100%;
     box-sizing: border-box;
 }
+
 .form-visita input:focus,
 .form-visita select:focus,
 .form-visita textarea:focus {
@@ -598,6 +600,15 @@ footer a {
     font-size: 14px;
 }
 
+.carrossel {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
 /* animação bonita */
 @keyframes glow {
     0% {
@@ -645,6 +656,93 @@ footer a {
     }
 }
 
+.carrossel {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-top: 50px;
+    display: block;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, .45);
+    border-radius: 50%;
+    transition: .3s;
+    user-select: none;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, .75);
+}
+
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dot.active {
+    background: #00BFFF;
+}
+
+.fade {
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 
 /* =========================
@@ -653,13 +751,32 @@ footer a {
 
 
 /* DESKTOP */
-@media (min-width: 769px) {
 
-    .menu-topo {
-        display: none;
+@media (max-width:480px) {
+
+    .carrossel {
+        width: calc(100% - 24px);
+        margin: 15px auto;
+    }
+
+    .slides img {
+        height: 190px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .prev,
+    .next {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
     }
 }
-
 
 
 /* =========================
@@ -713,6 +830,37 @@ footer a {
         text-align: center;
         width: 100%;
         padding: 0 10px;
+    }
+
+    /* =========================
+   CARROSSEL RESPONSIVO
+========================= */
+
+    .carrossel {
+        width: calc(100% - 30px);
+        margin: 20px auto;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 220px;
+        margin-top: 10px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .dots {
+        margin-top: 12px;
     }
 
     /* =========================
@@ -856,10 +1004,10 @@ footer a {
     }
 
     .form-visita input[type="date"] {
-    width: 100%;
-    font-size: 16px;
-    padding: 14px;
-}
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
 
     /* =========================
            BOTÕES FLUTUANTES
@@ -900,5 +1048,12 @@ footer a {
     footer {
         padding: 15px;
         font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .menu-topo {
+        display: none;
     }
 }
