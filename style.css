@@ -35,12 +35,11 @@ section {
 ========================= */
 .logo-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-align: left;
-    padding: 20px;
-    gap: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 /* LOGO CENTRAL */
@@ -120,6 +119,12 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 
 .titulo h1 {
@@ -793,15 +798,17 @@ footer a {
 
     .logo-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 30px;
+        text-align: center;
     }
 
     .titulo {
         flex: 1;
-        text-align: center;
+        text-align: right;
+        align-items: flex-end;
     }
 
     .mapa-localizacao {
@@ -812,20 +819,21 @@ footer a {
     .logo {
         width: 120px;
         height: 120px;
-        margin: 0;
+        margin: 10px;
     }
 
     .titulo h1 {
-        font-size: 16px;
+        font-size: 30px;
         line-height: 1.2;
         margin: 0 auto;
         text-align: center;
         width: 100%;
+        text-align: center;
         padding: 0 10px;
     }
 
     .titulo p {
-        font-size: 12px;
+        font-size: 25px;
         margin: 2px 0;
         text-align: center;
         width: 100%;
