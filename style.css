@@ -42,6 +42,13 @@ section {
     text-align: center;
 }
 
+.icone-whatsapp-footer {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
 /* LOGO CENTRAL */
 .logo {
     width: 170px;
