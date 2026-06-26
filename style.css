@@ -45,6 +45,7 @@ section {
 .icone-whatsapp-footer {
     width: 18px;      
     height: 18px;  
+    top: -1px;
     vertical-align: middle;
 }
 
