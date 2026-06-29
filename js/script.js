@@ -12,17 +12,24 @@ function enviarWhatsApp() {
 }
 
 function abrirModal(src) {
+
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
 
     modal.style.display = "flex";
     modalImg.src = src;
+
+    // pausa o carrossel
+    carrosselAtivo = false;
 }
 
 function fecharModal() {
-    document.getElementById("modal").style.display = "none";
-}
 
+    document.getElementById("modal").style.display = "none";
+
+    // volta o carrossel
+    carrosselAtivo = true;
+}
 window.onclick = function (event) {
     const modal = document.getElementById("modal");
 
@@ -85,14 +92,15 @@ function abrirDate(el) {
 }
 
 let slideIndex = 1;
+let carrosselAtivo = true;
+
 mostrarSlide(slideIndex);
 
 function mudarSlide(n) {
-    mostrarSlide(slideIndex += n);
-}
 
-function slideAtual(n) {
-    mostrarSlide(slideIndex = n);
+    if (!carrosselAtivo) return;
+
+    mostrarSlide(slideIndex += n);
 }
 
 function mostrarSlide(n) {
