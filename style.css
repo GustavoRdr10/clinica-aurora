@@ -114,6 +114,13 @@ section {
 .___contato_Whats {
     position: relative;
     z-index: 9999;
+    text-align: center;
+    margin: 8px 0; /* diminui o espaço */
+}
+
+.___contato_Whats p {
+    font-size: 18px;
+    margin-bottom: -35px;
 }
 
 .icone-whatsapp-footer {
@@ -632,7 +639,7 @@ footer a {
     width: 90%;
     max-width: 1200px;
     margin: 30px auto;
-    margin-top: -55px;
+    margin-top: -50px;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
@@ -688,9 +695,11 @@ footer a {
 .carrossel {
     width: 100%;
     max-width: 1200px;
+    margin: 50px auto 0;
     position: relative;
     overflow: hidden;
 }
+
 
 .slides {
     display: none;
@@ -700,7 +709,6 @@ footer a {
     width: 100%;
     height: 600px;
     object-fit: cover;
-    margin-top: 50px;
     display: block;
     border-radius: 15px;
     cursor: pointer;
@@ -790,7 +798,7 @@ footer a {
 
     .slides img {
         height: 190px;
-        margin-top: 10px;
+        margin-top: -20px;
         border-radius: 10px;
     }
 

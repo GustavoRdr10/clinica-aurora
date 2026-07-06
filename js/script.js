@@ -38,6 +38,10 @@ window.onclick = function (event) {
     }
 }
 
+function slideAtual(n) {
+    mostrarSlide(slideIndex = n);
+}
+
 function mostrarSecao(id) {
 
     document.querySelectorAll("section").forEach(secao => {
