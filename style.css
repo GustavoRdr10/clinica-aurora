@@ -111,6 +111,21 @@ section {
     color: #fff;
 }
 
+.___contato_Whats {
+    position: relative;
+    z-index: 9999;
+}
+
+.icone-whatsapp-footer {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.icone-whatsapp-footer:hover {
+    transform: scale(1.2);
+}
 /* Imagens com hover */
 .item img {
     width: 150px;
@@ -617,6 +632,7 @@ footer a {
     width: 90%;
     max-width: 1200px;
     margin: 30px auto;
+    margin-top: -55px;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
