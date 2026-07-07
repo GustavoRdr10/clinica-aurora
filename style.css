@@ -43,8 +43,8 @@ section {
 }
 
 .icone-whatsapp-footer {
-    width: 22px;      
-    height: 22px;  
+    width: 55px;
+    height: 55px; 
     top: -1px;
     vertical-align: middle;
 }
@@ -124,8 +124,8 @@ section {
 }
 
 .icone-whatsapp-footer {
-    width: 26px;
-    height: 26px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     transition: transform .2s;
 }
@@ -287,6 +287,7 @@ footer a {
 .sobre-nos {
     max-width: 800px;
     margin: 40px auto;
+    margin-top: 60px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -322,6 +323,7 @@ footer a {
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
+    margin-top: 60px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -427,6 +429,7 @@ footer a {
     margin: 40px auto;
     padding: 30px;
     background: #ffffff;
+    margin-top: 60px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -737,53 +740,53 @@ footer a {
 /* =========================
    BARRA REDES SOCIAIS
 ========================= */
-.social-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* antes era space-between */
-    gap: 10px;               /* controla a distância entre os 3 blocos */
-    padding: 0;              /* remove espaços internos */
-    margin: 0;
-    margin-bottom: -30px;
-    margin-top: 20px;
-    width: 100%;
+
+
+/*==============================
+  BARRA REDES SOCIAIS
+==============================*/
+
+.social-bar{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    margin-bottom: -45px !important;
+    max-width:900px;
+    margin:20px auto 0;
+    padding:0 20px;
 }
 
-.social-left,
-.social-center,
-.social-right {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.social-left{
+    justify-self:end;
 }
 
-.social-left,
-.social-right {
-    flex: 0; /* não ocupa espaço desnecessário */
+.social-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:0 30px;
 }
 
-.social-center {
-    gap: 6px;
+.social-right{
+    justify-self:start;
 }
 
-.social-center p {
-    margin: 0;
-    white-space: nowrap;
+.social-center span{
+    font-size:18px;
+    white-space:nowrap;
 }
 
-.social-icon {
-    width: 32px;
-    height: 32px;
-    display: block;
+.social-icon{
+    width:44px;
+    height:44px;
 }
 
-.icone-whatsapp-footer {
-    width: 40px;
-    height: 40px;
-    display: block;
+.icone-whatsapp-footer{
+    width: 55px;
+    height: 55px;
 }
-
 
 .prev {
     left: 15px;
@@ -865,28 +868,22 @@ footer a {
         padding: 0 10px;
     }
 
-    .social-bar {
-        gap: 4px;
-        padding: 2px;
-        margin: 4px 0 -10px;
+    .social-bar{
+        padding:0 5px;
     }
 
-    .social-center {
-        gap: 3px;
+    .social-center{
+        gap:6px;
     }
 
-    .social-center p {
-        font-size: 12px;
+    .social-center span{
+        font-size:12px;
     }
 
-    .social-icon {
-        width: 22px;
-        height: 22px;
-    }
-
-    .icone-whatsapp-footer {
-        width: 40px;
-        height: 40px;
+    .social-icon,
+    .icone-whatsapp-footer{
+        width:28px;
+        height:28px;
     }
 }
 
@@ -903,8 +900,7 @@ footer a {
     header {
         padding: 15px 10px;
     }
-
-    
+   
 
     .logo-container {
         display: flex;
@@ -915,47 +911,31 @@ footer a {
         text-align: center;
     }
     
-    .social-bar {
-        justify-content: center !important;
-        gap: 6px;
-        padding: 4px;
-        margin: 6px 0 -15px;
+    .social-bar{
+        max-width:100%;
+        padding:0 10px;
+        grid-template-columns:1fr auto 1fr;
         margin-bottom: -40px;
     }
 
-  
-    
-    .social-left,
-    .social-center,
-    .social-right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* ÍCONE + TEXTO NO CENTRO */
-    .social-center {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px; /* espaço entre ícone e texto */
-    }
-    
-    .social-center p {
-        margin: 0;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-    
-    /* garante alinhamento dos ícones */
-    .social-icon {
-        width: 28px;
-        height: 28px;
+    .social-center{
+        gap:8px;
+        padding:0 10px;
     }
 
-    .___contato_Whats p {
-        font-size: 18px;
+    .social-center span{
+        font-size:15px;
+    }
+
+    .social-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .icone-whatsapp-footer{
+        width: 43px;
+        height: 43px;
+        margin-top: -5px;
     }
 
     .titulo {
@@ -1131,6 +1111,7 @@ footer a {
     .visita {
         width: 90%;
         padding: 15px;
+        margin-top: 60px !important;
         margin: 20px auto;
     }
 
