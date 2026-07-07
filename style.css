@@ -42,7 +42,7 @@ section {
     text-align: center;
 }
 
-.icone-whatsapp-footer {
+.icone-whatsapp-social-bar {
     width: 55px;
     height: 55px; 
     top: -1px;
@@ -130,7 +130,13 @@ section {
     transition: transform .2s;
 }
 
+
+
 .icone-whatsapp-footer:hover {
+    transform: scale(1.2);
+}
+
+.icone-whatsapp-social-bar:hover {
     transform: scale(1.2);
 }
 /* Imagens com hover */
@@ -891,6 +897,10 @@ footer a {
         width:28px;
         height:28px;
     }
+    .icone-whatsapp-social-bar{
+        width:28px;
+        height:28px;
+    }
 }
 
 
@@ -939,6 +949,11 @@ footer a {
     }
 
     .icone-whatsapp-footer{
+        width: 25px;
+        height: 25px;
+        margin-top: -5px;
+    }
+    .icone-whatsapp-social-bar{
         width: 25px;
         height: 25px;
         margin-top: -5px;
@@ -1289,6 +1304,10 @@ footer a {
     }
 
     .icone-whatsapp-footer {
+        width: 22px;
+        height: 22px;
+    }
+    .icone-whatsapp-social-bar {
         width: 22px;
         height: 22px;
     }
