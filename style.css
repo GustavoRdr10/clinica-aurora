@@ -959,6 +959,31 @@ footer a {
         margin-top: -5px;
     }
 
+    .footer-dev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        line-height: 1;
+    }
+    
+    .footer-dev span {
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-dev a {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icone-whatsapp-footer {
+        width: 28px;
+        height: 28px;
+        display: block;
+    }
+
     .titulo {
         flex: 1;
         text-align: right;
