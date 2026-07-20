@@ -361,7 +361,7 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 4px;
     margin: 0;
 }
 
@@ -374,6 +374,7 @@ footer a {
     width: 25px;
     height: 25px;
     display: block;
+    position: relative;
 }
 
 .item img:hover {
