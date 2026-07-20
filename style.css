@@ -357,6 +357,25 @@ footer a {
     cursor: pointer;
 }
 
+.footer-dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+}
+
+.footer-dev a {
+    display: flex;
+    align-items: center;
+}
+
+.icone-whatsapp-footer {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
 .item img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
