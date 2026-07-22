@@ -975,12 +975,13 @@ footer a {
     .icone-whatsapp-footer{
         width: 25px;
         height: 25px;
-        margin-top: -5px;
+        margin-top: -1px;
+        margin-left: 2px;;
     }
     .icone-whatsapp-social-bar{
         width: 45px;
         height: 45px;
-        margin-top: -5px;
+        margin-top: -2px;
     }
 
     .titulo {
